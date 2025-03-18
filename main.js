@@ -12,6 +12,8 @@ const genCompChoice = () => {
 
 const drawGame = () => {
     console.log("Game was Draw");
+    msg.innerText = "Game was Draw. Play Again";
+    msg.style.backgroundColor = "#081b31";
 }
 
 const showWinner = (userWin) => {
@@ -19,10 +21,14 @@ const showWinner = (userWin) => {
         userScore++;
         document.getElementById('user-score').innerText = userScore;
         console.log("You Win");
+        msg.innerText = "You Win!";
+        msg.style.backgroundColor = "green";
     } else {
         compScore++;
         document.getElementById('comp-score').innerText = compScore;
         console.log("Comp Win");
+        msg.innerText = "You Lose!";
+        msg.style.backgroundColor = "red";
     }
 }
 
